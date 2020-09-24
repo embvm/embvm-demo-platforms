@@ -1,0 +1,6 @@
+#ifndef NRF52_DK_BLINKY_PLATFORM_LOGGER_HPP_
+#define NRF52_DK_BLINKY_PLATFORM_LOGGER_HPP_
+
+// No Logger
+
+#endif
