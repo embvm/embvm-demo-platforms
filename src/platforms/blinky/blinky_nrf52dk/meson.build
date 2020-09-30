@@ -7,11 +7,7 @@ blinky_nrf52dk_platform_dep = declare_dependency(
 	dependencies: [
 		nf52dk_blinky_hw_platform_dep,
 		blinky_demo_platform_dep,
-		libmemory_freelist_dep,
-		libc_dep,
-		libcxxabi_dep,
-		libcxx_full_dep,
-		compiler_rt_builtins_dep,
+		framework_dep
 	],
 	link_args: [
 		'-L' + meson.current_source_dir(),

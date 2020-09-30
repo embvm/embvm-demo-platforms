@@ -1,4 +1,4 @@
-project('PROJECT_NAME',
+project('embvm-demo-platforms',
 	['c', 'cpp'],
 	default_options : [
 		'warning_level=3',
@@ -97,6 +97,22 @@ freertos_heap3_dep = freertos_interface_subproject.get_variable('freertos_heap3_
 
 embvm_core_subproject = subproject('embvm-core')
 framework_dep = embvm_core_subproject.get_variable('framework_dep')
+framework_native_dep = embvm_core_subproject.get_variable('framework_native_dep')
+simulator_driver_dep = embvm_core_subproject.get_variable('simulator_driver_dep')
+simulator_processor_dep = embvm_core_subproject.get_variable('simulator_processor_dep')
+posix_os_dep =  embvm_core_subproject.get_variable('posix_os_dep')
+logging_subsystem_dep = embvm_core_subproject.get_variable('logging_subsystem_dep')
+
+aardvark_subproject = subproject('aardvark')
+aardvark_native_driver_dep = aardvark_subproject.get_variable('aardvark_native_driver_dep')
+
+vl53l1x_subproject = subproject('st-vl53l1x')
+st_vl53l1x_driver_dep = vl53l1x_subproject.get_variable('st_vl53l1x_driver_dep')
+st_vl53l1x_native_driver_dep = vl53l1x_subproject.get_variable('st_vl53l1x_native_driver_dep')
+
+oled_subproject = subproject('two-tone-oled')
+ssd1306_native_driver_dep = oled_subproject.get_variable('ssd1306_native_driver_dep')
+ssd1306_driver_dep = oled_subproject.get_variable('ssd1306_driver_dep')
 
 #######################
 # Process Source Tree #

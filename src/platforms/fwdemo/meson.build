@@ -1,10 +1,10 @@
 # meson build for framework internal Platform definitions
 
-if enable_threading == true
+if get_option('enable-threading') == true
 
 	subdir('fwdemo_sim')
 
-	if target_architecture == 'arm' and target_compiler_id == 'gcc'
+	if host_machine.cpu_family() == 'arm' and meson.get_compiler('cpp', native: false).get_id() == 'gcc'
 		subdir('fwdemo_nrf52dk')
 	endif
 
