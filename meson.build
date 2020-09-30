@@ -88,13 +88,16 @@ subdir('build/objcopy')
 # Subprojects #
 ###############
 
-libmemory_subproject = subproject('libmemory')
-etl_subproject = subproject('etl')
+nordic_subproject = subproject('nordic')
+nrf52840_processor_dep = nordic_subproject.get_variable('nrf52840_processor_dep')
 
-libmemory_freelist_dep = libmemory_subproject.get_variable('libmemory_freelist_dep')
-etl_dep = etl_subproject.get_variable('etl_dep')
+freertos_interface_subproject = subproject('freertos-interface')
+freertos_embvm_dep = freertos_interface_subproject.get_variable('freertos_embvm_dep')
+freertos_heap3_dep = freertos_interface_subproject.get_variable('freertos_heap3_dep')
 
-# Configure the project to include `libc` headers by default
+embvm_core_subproject = subproject('embvm-core')
+framework_dep = embvm_core_subproject.get_variable('framework_dep')
+
 #######################
 # Process Source Tree #
 #######################
@@ -102,14 +105,13 @@ etl_dep = etl_subproject.get_variable('etl_dep')
 # Add files to this variable if you want them analyzed by clang-tidy
 clangtidy_files = []
 # Add dependencies to this array for testing with Catch2
-catch2_tests_dep = []
+#catch2_tests_dep = []
 
 subdir('src')
-subdir('test')
 
 # Defined after src and test so catch2_dep is fully populated
 # when creating the built-in targets
-subdir('build/test/catch2')
+#subdir('build/test/catch2')
 
 ###################
 # Tooling Modules #
