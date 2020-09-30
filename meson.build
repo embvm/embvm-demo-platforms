@@ -97,6 +97,7 @@ freertos_heap3_dep = freertos_interface_subproject.get_variable('freertos_heap3_
 
 embvm_core_subproject = subproject('embvm-core')
 framework_dep = embvm_core_subproject.get_variable('framework_dep')
+framework_threadless_dep = embvm_core_subproject.get_variable('framework_threadless_dep')
 framework_native_dep = embvm_core_subproject.get_variable('framework_native_dep')
 simulator_driver_dep = embvm_core_subproject.get_variable('simulator_driver_dep')
 simulator_processor_dep = embvm_core_subproject.get_variable('simulator_processor_dep')

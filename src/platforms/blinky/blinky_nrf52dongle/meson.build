@@ -7,7 +7,7 @@ blinky_nrf52dongle_platform_dep = declare_dependency(
 	dependencies: [
 		nf52840_dongle_hw_platform_dep,
 		blinky_demo_platform_dep,
-		framework_dep
+		framework_threadless_dep
 	],
 	link_args: [
 		'-L' + meson.current_source_dir(),
