@@ -11,8 +11,8 @@
 #include <simulator/system_clock.hpp>
 #include <simulator/timer.hpp>
 #include <simulator_processor.hpp>
-#include <solomon_systech/ssd1306/ssd1306.hpp>
-#include <st/vl53l1x/vl53l1x.hpp>
+#include <ssd1306.hpp>
+#include <vl53l1x.hpp>
 
 // clang-format off
 #include <dispatch/interrupt_queue.hpp> // This has to be last b/c of an OS X include pollution

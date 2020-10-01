@@ -9,8 +9,8 @@
 #include <nRF52840.hpp>
 #include <nrf52_i2c_master.hpp>
 #include <nrf_gpio.hpp>
-#include <solomon_systech/ssd1306/ssd1306.hpp>
-#include <st/vl53l1x/vl53l1x.hpp>
+#include <ssd1306.hpp>
+#include <vl53l1x.hpp>
 #include <thumb_interrupt_lock.hpp>
 
 #define SPARKFUN_VL53L1X_ADDR 0x29
