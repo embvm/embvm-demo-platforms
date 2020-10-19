@@ -3,7 +3,6 @@
 
 #include <platform/virtual_platform.hpp>
 
-// The FW demo platform uses a dynamic driver registry since we are running on the host machine
 using PlatformDriverRegistry = embvm::StaticDriverRegistry<12>;
 
 #endif

@@ -34,7 +34,6 @@ class NRF52DKHWPlatform : public embvm::VirtualHwPlatformBase<NRF52DKHWPlatform>
 	void startBlink() noexcept;
 
   private:
-  private:
 	nRF52840 processor;
 
 	nRFGPIOOutput<0, 13> led1_pin{};

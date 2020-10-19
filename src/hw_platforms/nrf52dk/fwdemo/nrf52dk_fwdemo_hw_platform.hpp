@@ -10,8 +10,8 @@
 #include <nrf52_i2c_master.hpp>
 #include <nrf_gpio.hpp>
 #include <ssd1306.hpp>
-#include <vl53l1x.hpp>
 #include <thumb_interrupt_lock.hpp>
+#include <vl53l1x.hpp>
 
 #define SPARKFUN_VL53L1X_ADDR 0x29
 #define SPARKFUN_SSD1306_ADDR 0x3D

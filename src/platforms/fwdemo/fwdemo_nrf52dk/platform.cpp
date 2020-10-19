@@ -22,6 +22,8 @@ void nRF52DK_FrameworkDemoPlatform::earlyInitHook_() noexcept
 {
 	malloc_addblock(&__HeapBase, reinterpret_cast<uintptr_t>(&__HeapLimit) -
 									 reinterpret_cast<uintptr_t>(&__HeapBase));
+	// TODO: need to forward to hardware platform early init hook? or does the boot code take care
+	// of that?
 }
 
 void nRF52DK_FrameworkDemoPlatform::initOS_(void (*main_thread_func)()) noexcept
