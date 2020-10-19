@@ -136,6 +136,8 @@ subdir('src')
 # Tooling Modules #
 ###################
 
+clangformat_targets = ['src']
+
 subdir('build/analysis/clang-tidy')
 subdir('build/analysis/complexity')
 subdir('build/analysis/cppcheck')
