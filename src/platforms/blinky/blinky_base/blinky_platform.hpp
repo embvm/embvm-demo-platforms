@@ -15,16 +15,12 @@ extern volatile bool abort_program_;
 ///
 /// @code
 /// using VirtualPlatform = embvm::VirtualPlatformBase<
-///		BlinkyDemoPlatform<SimulatorHWPlatform>, PlatformDriverRegistry>;
+///		BlinkyDemoPlatform<SimulatorHWPlatform>>;
 /// @endcode
-template<class THWPlatform, class TDriverRegistry>
-class BlinkyDemoPlatform
-	: public embvm::VirtualPlatformBase<BlinkyDemoPlatform<THWPlatform, TDriverRegistry>,
-										TDriverRegistry>
+template<class THWPlatform>
+class BlinkyDemoPlatform : public embvm::VirtualPlatformBase<BlinkyDemoPlatform<THWPlatform>>
 {
-	using VirtualPlatform =
-		embvm::VirtualPlatformBase<BlinkyDemoPlatform<THWPlatform, TDriverRegistry>,
-								   TDriverRegistry>;
+	using VirtualPlatform = embvm::VirtualPlatformBase<BlinkyDemoPlatform<THWPlatform>>;
 
   public:
 	static void earlyInitHook_() noexcept

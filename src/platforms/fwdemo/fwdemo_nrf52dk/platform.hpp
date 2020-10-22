@@ -13,10 +13,9 @@
 extern volatile bool abort_program_;
 
 class nRF52DK_FrameworkDemoPlatform final
-	: public embvm::VirtualPlatformBase<nRF52DK_FrameworkDemoPlatform, PlatformDriverRegistry>
+	: public embvm::VirtualPlatformBase<nRF52DK_FrameworkDemoPlatform>
 {
-	using PlatformBase =
-		embvm::VirtualPlatformBase<nRF52DK_FrameworkDemoPlatform, PlatformDriverRegistry>;
+	using PlatformBase = embvm::VirtualPlatformBase<nRF52DK_FrameworkDemoPlatform>;
 
   public:
 #pragma mark - Base Platform Functions

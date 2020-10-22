@@ -7,7 +7,7 @@
 #include <platform_options.hpp>
 
 /// Firmware Demo Simulator Platform Declaration: Use Sim HW Platform
-using VirtualPlatform = BlinkyDemoPlatform<NRF52DKHWPlatform, PlatformDriverRegistry>;
+using VirtualPlatform = BlinkyDemoPlatform<NRF52DKHWPlatform>;
 using PlatformBootSequencer = embvm::BootSequencer<embvm::DefaultBootStrategy<VirtualPlatform>>;
 
 #endif // BLINKY_NRF52_PLATFORM_HPP_

@@ -13,19 +13,9 @@
 /// Declared in main.c, set in Sim Platform's boot.cpp using std::signal
 extern volatile bool abort_program_;
 
-/// This Platform serves as a base class that the specific framework demo applications
-/// Can derive from. This class takes a hardware platform as a template.
-/// Clients should implement specific instances of this platform as follows:
-///
-/// @code
-/// using VirtualPlatform = embvm::VirtualPlatformBase<
-///		FrameworkDemoPlatform<SimulatorHWPlatform>, PlatformDriverRegistry>;
-/// @endcode
-class FrameworkDemoSimPlatform
-	: public embvm::VirtualPlatformBase<FrameworkDemoSimPlatform, PlatformDriverRegistry>
+class FrameworkDemoSimPlatform : public embvm::VirtualPlatformBase<FrameworkDemoSimPlatform>
 {
-	using VirtualPlatform =
-		embvm::VirtualPlatformBase<FrameworkDemoSimPlatform, PlatformDriverRegistry>;
+	using VirtualPlatform = embvm::VirtualPlatformBase<FrameworkDemoSimPlatform>;
 
   public:
 #pragma mark - Base Platform Functions
