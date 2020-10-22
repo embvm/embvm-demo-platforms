@@ -1,5 +1,6 @@
 
 # Hardware Platforms
+subdir('hw_platforms/nrf52840_dongle/blinky')
 subdir('hw_platforms/nrf52dk/blinky')
 subdir('hw_platforms/nrf52dk/fwdemo')
 subdir('hw_platforms/simulator/blinky')

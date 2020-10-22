@@ -5,7 +5,7 @@ blinky_nrf52dongle_platform_inc = include_directories('.')
 blinky_nrf52dongle_platform_dep = declare_dependency(
 	include_directories: blinky_nrf52dongle_platform_inc,
 	dependencies: [
-		nf52840_dongle_hw_platform_dep,
+		nrf52840_dongle_hw_platform_dep,
 		blinky_demo_platform_dep,
 		framework_threadless_dep
 	],
