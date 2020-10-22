@@ -92,6 +92,7 @@ subdir('build/objcopy')
 
 nordic_subproject = subproject('nordic')
 nrf52840_processor_dep = nordic_subproject.get_variable('nrf52840_processor_dep')
+nrf52_freertos_dep = nordic_subproject.get_variable('nrf52_freertos_dep')
 
 freertos_interface_subproject = subproject('freertos-interface')
 freertos_embvm_dep = freertos_interface_subproject.get_variable('freertos_embvm_dep')
