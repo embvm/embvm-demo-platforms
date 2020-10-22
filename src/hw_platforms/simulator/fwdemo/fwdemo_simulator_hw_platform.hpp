@@ -161,7 +161,7 @@ class FWDemoSimulatorHWPlatform : public embvm::VirtualHwPlatformBase<FWDemoSimu
 	TimerManager_t tm_{timer0};
 	TimerHandle_t led_sw_timer_handle{};
 
-	SimulatorProcessor processor{};
+	SimulatorProcessor processor;
 };
 
 #endif // SIMULATOR_HW_PLATFORM_HPP_

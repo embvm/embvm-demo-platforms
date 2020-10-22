@@ -45,12 +45,6 @@ class FrameworkDemoSimPlatform
 	/// Default constructor
 	FrameworkDemoSimPlatform() noexcept {}
 
-	/// Child classes can override the simulator platform name using the std::string_view
-	/// constructor
-	explicit FrameworkDemoSimPlatform(const std::string_view& name) noexcept : VirtualPlatform(name)
-	{
-	}
-
 	~FrameworkDemoSimPlatform() = default;
 
   private:
