@@ -54,7 +54,7 @@ class FWDemoSimulatorHWPlatform : public embvm::VirtualHwPlatformBase<FWDemoSimu
 
   public:
 	/// @brief Default constructor.
-	FWDemoSimulatorHWPlatform() noexcept : PlatformBase("Simulator HW Platform") {}
+	FWDemoSimulatorHWPlatform() noexcept;
 
 	/// @brief Default destructor.
 	~FWDemoSimulatorHWPlatform() noexcept;

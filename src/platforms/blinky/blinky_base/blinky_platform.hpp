@@ -55,14 +55,10 @@ class BlinkyDemoPlatform
 	// platforms except through the factory
   public:
 	/// Default constructor supplies a default name for the simulator platform
-	BlinkyDemoPlatform() noexcept : VirtualPlatform("Blinky Base")
+	BlinkyDemoPlatform() noexcept
 	{
 		// empty
 	}
-
-	/// Child classes can override the simulator platform name using the std::string_view
-	/// constructor
-	explicit BlinkyDemoPlatform(const std::string_view& name) noexcept : VirtualPlatform(name) {}
 
 	~BlinkyDemoPlatform() = default;
 

@@ -35,8 +35,8 @@ class nRF52DK_FrameworkDemoPlatform final
 #pragma mark - Custom Platform Functions -
 
   public:
-	/// Default constructor supplies a default name for the simulator platform
-	nRF52DK_FrameworkDemoPlatform() noexcept : PlatformBase("nRF52 FWDemo Platform") {}
+	/// Default constructor
+	nRF52DK_FrameworkDemoPlatform() noexcept {}
 	~nRF52DK_FrameworkDemoPlatform() = default;
 
   private:

@@ -2,6 +2,16 @@
 #include <cassert>
 #include <logging/log.hpp>
 
+BlinkySimulatorHWPlatform::BlinkySimulatorHWPlatform() noexcept
+{
+	registerDriver("sysclock", &sysclock);
+	// Note that led0 is registered, but not gpio5
+	registerDriver("led0", &led0);
+	// Note that timer1 is registered, but not timer0 - it's used for the
+	// timer manager, so it's not publicly available.
+	registerDriver("timer1", &timer1);
+}
+
 BlinkySimulatorHWPlatform::~BlinkySimulatorHWPlatform() noexcept {}
 
 void BlinkySimulatorHWPlatform::init_() noexcept

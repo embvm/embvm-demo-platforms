@@ -21,7 +21,7 @@ class BlinkySimulatorHWPlatform : public embvm::VirtualHwPlatformBase<BlinkySimu
 
   public:
 	/// @brief Default constructor.
-	BlinkySimulatorHWPlatform() noexcept : PlatformBase("Blinky Simulator HW Platform") {}
+	BlinkySimulatorHWPlatform() noexcept;
 
 	/// @brief Default destructor.
 	~BlinkySimulatorHWPlatform() noexcept;

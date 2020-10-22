@@ -2,6 +2,21 @@
 #include <cassert>
 #include <logging/log.hpp>
 
+FWDemoSimulatorHWPlatform::FWDemoSimulatorHWPlatform() noexcept
+{
+	registerDriver("sysclock", &sysclock);
+	registerDriver("gpio4", &gpio4);
+	registerDriver("gpio3", &gpio3);
+	// Note that led0 is registered, but not gpio5
+	registerDriver("led0", &led0);
+	// Note that timer1 is registered, but not timer0 - it's used for the
+	// timer manager, so it's not publicly available.
+	registerDriver("timer1", &timer1);
+	registerDriver("i2c0", &i2c0);
+	registerDriver("tof0", &tof0);
+	registerDriver("screen0", &screen0);
+}
+
 FWDemoSimulatorHWPlatform::~FWDemoSimulatorHWPlatform() noexcept
 {
 	/// Turn off the screen & led before exiting the program

@@ -1,6 +1,18 @@
 #include "nrf52dk_fwdemo_hw_platform.hpp"
 #include <cassert>
 
+NRF52DKHWPlatform::NRF52DKHWPlatform() noexcept
+{
+	registerDriver("led1", &led1);
+	registerDriver("led2", &led2);
+	registerDriver("led3", &led3);
+	registerDriver("led4", &led3);
+	// Note that we register the active object wrapper, not the base driver.
+	registerDriver("i2c0", &i2c0);
+	registerDriver("tof0", &tof0);
+	registerDriver("screen0", &screen0);
+}
+
 NRF52DKHWPlatform::~NRF52DKHWPlatform() noexcept {}
 
 void NRF52DKHWPlatform::earlyInitHook_() noexcept {}

@@ -42,8 +42,8 @@ class FrameworkDemoSimPlatform
 	// TODO: can I make these private somehow? I dont' want people creating their own simulator
 	// platforms except through the factory
   public:
-	/// Default constructor supplies a default name for the simulator platform
-	FrameworkDemoSimPlatform() noexcept : VirtualPlatform("Simulator Base") {}
+	/// Default constructor
+	FrameworkDemoSimPlatform() noexcept {}
 
 	/// Child classes can override the simulator platform name using the std::string_view
 	/// constructor
