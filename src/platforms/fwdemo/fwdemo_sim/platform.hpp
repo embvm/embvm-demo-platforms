@@ -13,9 +13,11 @@
 /// Declared in main.c, set in Sim Platform's boot.cpp using std::signal
 extern volatile bool abort_program_;
 
-class FrameworkDemoSimPlatform : public embvm::VirtualPlatformBase<FrameworkDemoSimPlatform>
+class FrameworkDemoSimPlatform
+	: public embvm::VirtualPlatformBase<FrameworkDemoSimPlatform, FWDemoSimulatorHWPlatform>
 {
-	using VirtualPlatform = embvm::VirtualPlatformBase<FrameworkDemoSimPlatform>;
+	using VirtualPlatform =
+		embvm::VirtualPlatformBase<FrameworkDemoSimPlatform, FWDemoSimulatorHWPlatform>;
 
   public:
 #pragma mark - Base Platform Functions
@@ -41,8 +43,6 @@ class FrameworkDemoSimPlatform : public embvm::VirtualPlatformBase<FrameworkDemo
 	void updateToFMode() noexcept;
 
   private:
-	FWDemoSimulatorHWPlatform hw_platform_{};
-
 	FWDemoSimulatorHWPlatform::TimerHandle_t led_sw_timer_handle{};
 };
 

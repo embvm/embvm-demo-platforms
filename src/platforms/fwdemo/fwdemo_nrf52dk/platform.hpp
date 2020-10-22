@@ -13,9 +13,10 @@
 extern volatile bool abort_program_;
 
 class nRF52DK_FrameworkDemoPlatform final
-	: public embvm::VirtualPlatformBase<nRF52DK_FrameworkDemoPlatform>
+	: public embvm::VirtualPlatformBase<nRF52DK_FrameworkDemoPlatform, NRF52DKHWPlatform>
 {
-	using PlatformBase = embvm::VirtualPlatformBase<nRF52DK_FrameworkDemoPlatform>;
+	using PlatformBase =
+		embvm::VirtualPlatformBase<nRF52DK_FrameworkDemoPlatform, NRF52DKHWPlatform>;
 
   public:
 #pragma mark - Base Platform Functions
@@ -43,8 +44,6 @@ class nRF52DK_FrameworkDemoPlatform final
 
 #pragma mark - Data Members -
   private:
-	NRF52DKHWPlatform hw_platform_;
-
 	/** Thread handle for the created-during-runtime LED thread
 	 *
 	 * We defer initialization of the LED thread so that we can can start the blinking process

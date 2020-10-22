@@ -18,9 +18,11 @@ extern volatile bool abort_program_;
 ///		BlinkyDemoPlatform<SimulatorHWPlatform>>;
 /// @endcode
 template<class THWPlatform>
-class BlinkyDemoPlatform : public embvm::VirtualPlatformBase<BlinkyDemoPlatform<THWPlatform>>
+class BlinkyDemoPlatform
+	: public embvm::VirtualPlatformBase<BlinkyDemoPlatform<THWPlatform>, THWPlatform>
 {
-	using VirtualPlatform = embvm::VirtualPlatformBase<BlinkyDemoPlatform<THWPlatform>>;
+	using VirtualPlatform =
+		embvm::VirtualPlatformBase<BlinkyDemoPlatform<THWPlatform>, THWPlatform>;
 
   public:
 	static void earlyInitHook_() noexcept
