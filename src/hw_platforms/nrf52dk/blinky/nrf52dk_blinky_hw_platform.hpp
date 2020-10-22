@@ -39,10 +39,10 @@ class NRF52DKHWPlatform : public embvm::VirtualHwPlatformBase<NRF52DKHWPlatform>
 	nRFGPIOOutput<0, 15> led3_pin{};
 	nRFGPIOOutput<0, 16> led4_pin{};
 
-	embvm::led::gpioActiveLow led1{led1_pin, "led1"};
-	embvm::led::gpioActiveLow led2{led2_pin, "led2"};
-	embvm::led::gpioActiveLow led3{led3_pin, "led3"};
-	embvm::led::gpioActiveLow led4{led4_pin, "led4"};
+	embvm::led::gpioActiveLow led1{led1_pin};
+	embvm::led::gpioActiveLow led2{led2_pin};
+	embvm::led::gpioActiveLow led3{led3_pin};
+	embvm::led::gpioActiveLow led4{led4_pin};
 };
 
 #endif // NRF52_DK_HW_PLATFORM_HPP_
