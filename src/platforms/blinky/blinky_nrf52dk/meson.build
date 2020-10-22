@@ -4,6 +4,9 @@ blinky_nrf52dk_platform_inc = include_directories('.')
 
 blinky_nrf52dk_platform_dep = declare_dependency(
 	include_directories: blinky_nrf52dk_platform_inc,
+	sources: [
+		files('platform.cpp')
+	],
 	dependencies: [
 		nf52dk_blinky_hw_platform_dep,
 		blinky_demo_platform_dep,

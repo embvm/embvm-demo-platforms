@@ -15,11 +15,7 @@ NRF52DongleHWPlatform::NRF52DongleHWPlatform() noexcept
 
 NRF52DongleHWPlatform::~NRF52DongleHWPlatform() noexcept {}
 
-void NRF52DongleHWPlatform::earlyInitHook_() noexcept
-{
-	// TODO: this doesn't actually belong in HW platform
-	malloc_addblock(&__HeapBase, &__HeapLimit - &__HeapBase);
-}
+void NRF52DongleHWPlatform::earlyInitHook_() noexcept {}
 
 void NRF52DongleHWPlatform::init_() noexcept
 {
