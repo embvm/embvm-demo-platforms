@@ -16,5 +16,4 @@ blinky_nrf52dk_platform_dep = declare_dependency(
 		'-L' + meson.current_source_dir(),
 		'-Tblinky_gcc_nrf52.ld',
 	],
-	sources: files('platform.cpp'),
 )
