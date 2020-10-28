@@ -148,9 +148,9 @@ class FWDemoSimulatorHWPlatform : public embvm::VirtualHwPlatformBase<FWDemoSimu
 	embdrv::SimulatorSystemClock sysclock{};
 	embdrv::aardvarkAdapter aardvark{embdrv::aardvarkMode::GpioI2C};
 	embdrv::aardvarkI2CMaster i2c0{aardvark};
-	embdrv::aardvarkGPIOOutput<5> gpio5{aardvark};
-	embdrv::aardvarkGPIOInput<4> gpio4{aardvark};
-	embdrv::aardvarkGPIOInput<3> gpio3{aardvark};
+	embdrv::aardvarkGPIO gpio5{aardvark, 5, embvm::gpio::mode::output};
+	embdrv::aardvarkGPIO gpio4{aardvark, 4, embvm::gpio::mode::input};
+	embdrv::aardvarkGPIO gpio3{aardvark, 3, embvm::gpio::mode::input};
 	embvm::led::gpioActiveHigh led0{gpio5};
 	embdrv::vl53l1x tof0{i2c0, SPARKFUN_VL53L1X_ADDR};
 	embdrv::ssd1306 screen0{i2c0, SPARKFUN_SSD1306_ADDR};

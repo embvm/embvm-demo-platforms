@@ -71,7 +71,7 @@ class BlinkySimulatorHWPlatform : public embvm::VirtualHwPlatformBase<BlinkySimu
 
 	embdrv::SimulatorSystemClock sysclock;
 	embdrv::aardvarkAdapter aardvark{embdrv::aardvarkMode::GpioI2C};
-	embdrv::aardvarkGPIOOutput<5> gpio5{aardvark};
+	embdrv::aardvarkGPIO gpio5{aardvark, 5, embvm::gpio::mode::output};
 	embvm::led::gpioActiveHigh led0{gpio5};
 
 	// Leave unconfigured during declaration, update in init
