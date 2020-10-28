@@ -15,3 +15,10 @@ fwdemo_nrf52dk_platform_dep = declare_dependency(
 	],
 	sources: files('platform.cpp'),
 )
+
+# Compilation target for CI purposes
+if(meson.is_subproject() == false)
+	fwdemo_nrf52dk_platform = static_library('fwdemo_nrf52dk_platform',
+		dependencies: fwdemo_nrf52dk_platform_dep,
+	)
+endif

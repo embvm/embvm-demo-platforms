@@ -18,3 +18,10 @@ blinky_nrf52dongle_platform_dep = declare_dependency(
 	],
 	sources: files('platform.cpp'),
 )
+
+# Compilation target for CI purposes
+if(meson.is_subproject() == false)
+	blinky_nrf52dongle_platform = static_library('blinky_nrf52dongle_platform',
+		dependencies: blinky_nrf52dongle_platform_dep,
+	)
+endif

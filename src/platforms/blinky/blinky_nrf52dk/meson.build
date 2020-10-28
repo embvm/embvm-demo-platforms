@@ -17,3 +17,10 @@ blinky_nrf52dk_platform_dep = declare_dependency(
 		'-Tblinky_gcc_nrf52.ld',
 	],
 )
+
+# Compilation target for CI purposes
+if(meson.is_subproject() == false)
+	blinky_nrf52dk_platform = static_library('blinky_nrf52dk_platform',
+		dependencies: blinky_nrf52dk_platform_dep,
+	)
+endif
