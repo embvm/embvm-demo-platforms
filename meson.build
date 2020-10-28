@@ -108,7 +108,7 @@ posix_os_dep =  embvm_core_subproject.get_variable('posix_os_dep')
 logging_subsystem_dep = embvm_core_subproject.get_variable('logging_subsystem_dep')
 
 libmemory_subproject = subproject('libmemory')
-libmemory_freelist_dep = subproject('libmemory_freelist_dep')
+libmemory_freelist_dep = libmemory_subproject.get_variable('libmemory_freelist_dep')
 
 aardvark_subproject = subproject('aardvark')
 aardvark_native_driver_dep = aardvark_subproject.get_variable('aardvark_native_driver_dep')
