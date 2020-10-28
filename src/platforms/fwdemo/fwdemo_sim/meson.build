@@ -29,6 +29,7 @@ endif
 
 if(meson.is_subproject() == false)
 	fwdemo_sim_platform = static_library('fwdemo_sim_platform',
-		dependencies: fwdemo_sim_platform_dep
+		dependencies: fwdemo_sim_platform_dep,
+		native: true
 	)
 endif

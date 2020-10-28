@@ -29,6 +29,7 @@ endif
 # Used to ensure compilation is successful for CI purposes
 if(meson.is_subproject() == false)
 	blinky_sim_platform = static_library('blinky_sim_platform',
-		dependencies: blinky_sim_platform_dep
+		dependencies: blinky_sim_platform_dep,
+		native: true
 	)
 endif
