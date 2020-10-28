@@ -18,6 +18,11 @@ char tof_string_[32];
 char tof_mode_string_[32];
 } // namespace
 
+extern "C" void _putchar(char c)
+{
+	// TODO: implement
+}
+
 void nRF52DK_FrameworkDemoPlatform::earlyInitHook_() noexcept
 {
 	malloc_addblock(&__HeapBase, reinterpret_cast<uintptr_t>(&__HeapLimit) -
