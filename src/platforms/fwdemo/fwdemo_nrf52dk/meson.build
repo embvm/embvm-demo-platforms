@@ -6,8 +6,10 @@ fwdemo_nrf52dk_platform_dep = declare_dependency(
 	include_directories: fwdemo_nrf52dk_platform_inc,
 	dependencies: [
 		framework_dep,
-		nrf52dk_fwdemo_hw_platform,
 		nrf52_freertos_dep,
+		freertos_embvm_dep,
+		freertos_heap3_dep,
+		nrf52dk_fwdemo_hw_platform,
 	],
 	link_args: [
 		'-L' + meson.current_source_dir(),
