@@ -34,10 +34,11 @@ class NRF52DKHWPlatform : public embvm::VirtualHwPlatformBase<NRF52DKHWPlatform>
   private:
 	nRF52840 processor;
 
-	nRFGPIOOutput<0, 13> led1_pin{};
-	nRFGPIOOutput<0, 14> led2_pin{};
-	nRFGPIOOutput<0, 15> led3_pin{};
-	nRFGPIOOutput<0, 16> led4_pin{};
+	// Why don't we bother setting this to output? LED will do this for us.
+	nRFGPIO<0, 13> led1_pin{};
+	nRFGPIO<0, 14> led2_pin{};
+	nRFGPIO<0, 15> led3_pin{};
+	nRFGPIO<0, 16> led4_pin{};
 
 	embvm::led::gpioActiveLow led1{led1_pin};
 	embvm::led::gpioActiveLow led2{led2_pin};
