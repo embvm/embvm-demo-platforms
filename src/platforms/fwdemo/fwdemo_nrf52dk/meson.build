@@ -10,6 +10,7 @@ fwdemo_nrf52dk_platform_dep = declare_dependency(
 		freertos_embvm_dep,
 		freertos_heap3_dep,
 		nrf52dk_fwdemo_hw_platform,
+		libmemory_freelist_dep,
 	],
 	link_args: [
 		'-L' + meson.current_source_dir(),
