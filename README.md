@@ -222,7 +222,9 @@ If you are interested in contributing to this project, please read our [contribu
 
 Copyright © 2020 Embedded Artistry LLC
 
-This project is released under GPLv3. See the [LICENSE](LICENSE) file for further licensing details.
+The [source code for this project](src) is released under the MIT license. Note that the [`embvm-core`](https://github.com/embvm/embvm-core) project itself is dual-licensed as GPLv3 with a commercial licensing option. Please note that using this module as-is will pull in the `embvm-core` project for compiling the end application, requiring you to abide by the GPLv3 or commercial licensing terms.
+
+See the [LICENSE.md](LICENSE.md) file for further licensing details.
 
 **[Back to top](#table-of-contents)**
 
