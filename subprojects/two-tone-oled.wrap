@@ -1,4 +1,4 @@
 [wrap-git]
-url = git@github.com:embvm-drivers/two-tone-oled.git
+url = https://github.com/embvm-drivers/two-tone-oled
 revision = master
 clone-recursive = true
