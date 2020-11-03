@@ -1,3 +1,6 @@
+// Copyright 2020 Embedded Artistry LLC
+// SPDX-License-Identifier: MIT
+
 #include "fwdemo_simulator_hw_platform.hpp"
 #include <cassert>
 #include <logging/log.hpp>

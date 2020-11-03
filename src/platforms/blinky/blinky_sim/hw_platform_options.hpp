@@ -1,3 +1,6 @@
+// Copyright 2020 Embedded Artistry LLC
+// SPDX-License-Identifier: MIT
+
 #ifndef SIM_DEMO_PLATFORM_HW_PLATFORM_OPTIONS_HPP
 #define SIM_DEMO_PLATFORM_HW_PLATFORM_OPTIONS_HPP
 
