@@ -1,5 +1,5 @@
-#ifndef NUCLEO_L4R5ZI_HW_PLATFORM_HPP_
-#define NUCLEO_L4R5ZI_HW_PLATFORM_HPP_
+#ifndef NUCLEO_L4R5ZI_BLINKY_HW_PLATFORM_HPP_
+#define NUCLEO_L4R5ZI_BLINKY_HW_PLATFORM_HPP_
 
 #include <driver/led.hpp>
 #include <hw_platform/virtual_hw_platform.hpp>
@@ -46,4 +46,4 @@ class NucleoL4R5ZI_HWPlatform : public embvm::VirtualHwPlatformBase<NucleoL4R5ZI
 	STM32Timer timer0{embvm::timer::channel::CH2, std::chrono::seconds(1)};
 };
 
-#endif // NUCLEO_L4R5ZI_HW_PLATFORM_HPP_
+#endif // NUCLEO_L4R5ZI_BLINKY_HW_PLATFORM_HPP_
