@@ -13,7 +13,8 @@ nucleo_l4r5zi_fwdemo_platform_dep = declare_dependency(
 	],
 	compile_args: [
 		# TODO: remove once workaround is no longer needed (or threading is supportd)
-		'-DVL53L1X_DISABLE_LOCKING'
+		'-DVL53L1X_DISABLE_LOCKING',
+		'-DENABLE_STM32L4_WORKAROUND'
 	],
 )
 
