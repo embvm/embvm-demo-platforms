@@ -16,10 +16,10 @@
 extern volatile bool abort_program_;
 
 class NucleoL4RZI_BlinkyPlatform final
-	: public embvm::VirtualPlatformBase<NucleoL4RZI_BlinkyPlatform, PlatformDriverRegistry>
+	: public embvm::VirtualPlatformBase<NucleoL4RZI_BlinkyPlatform, NucleoL4R5ZI_HWPlatform>
 {
 	using PlatformBase =
-		embvm::VirtualPlatformBase<NucleoL4RZI_BlinkyPlatform, PlatformDriverRegistry>;
+		embvm::VirtualPlatformBase<NucleoL4RZI_BlinkyPlatform, NucleoL4R5ZI_HWPlatform>;
 
   public:
 	// APIs to required by base class
@@ -35,9 +35,6 @@ class NucleoL4RZI_BlinkyPlatform final
 	// Constructor/destructor
 	NucleoL4RZI_BlinkyPlatform() noexcept {}
 	~NucleoL4RZI_BlinkyPlatform() noexcept = default;
-
-  private:
-	NucleoL4R5ZI_HWPlatform hw_platform_;
 };
 
 using VirtualPlatform = NucleoL4RZI_BlinkyPlatform;
