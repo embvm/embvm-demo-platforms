@@ -4,6 +4,7 @@
  */
 
 #include "platform.hpp"
+#include <platform_logger.hpp>
 #include <printf.h> // for _putchar definition
 // TODO: test memory setup with linker scripts
 //#include <malloc.h>
@@ -15,6 +16,17 @@ void _putchar(char c)
 {
 	(void)c;
 	// TODO: implement
+}
+
+// TODO: this is a temporary workaroudn for building fwdemo, because operator delete(void*) is being
+// included, which wants free(). This might be another deleting destructor. Right now I just
+// want to enable the build for a release to Ethan.
+// A suitable solution for such cases may also be to include an asserting malloc/free, but
+// I still want to know WHY this is being included.
+void free(void* ptr)
+{
+	(void)ptr;
+	assert(0); // Not supported - no dynamic memory here!
 }
 
 namespace
@@ -64,4 +76,9 @@ void NucleoL4RZI_DemoPlatform::init_() noexcept {}
 void NucleoL4RZI_DemoPlatform::startBlink() noexcept
 {
 	hw_platform_.startBlink();
+}
+
+void NucleoL4RZI_DemoPlatform::echoLogBufferToConsole() noexcept
+{
+	PlatformLogger::inst().dump();
 }
