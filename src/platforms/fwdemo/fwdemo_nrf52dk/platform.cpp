@@ -21,6 +21,7 @@ char tof_mode_string_[32];
 extern "C" void _putchar(char c)
 {
 	// TODO: implement
+	(void)c;
 }
 
 void nRF52DK_FrameworkDemoPlatform::earlyInitHook_() noexcept
