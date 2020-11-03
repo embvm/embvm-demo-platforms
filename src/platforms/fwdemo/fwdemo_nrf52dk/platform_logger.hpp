@@ -1,5 +1,5 @@
-#ifndef NRF52_DK_BLINKY_PLATFORM_LOGGER_HPP_
-#define NRF52_DK_BLINKY_PLATFORM_LOGGER_HPP_
+#ifndef NRF52_DK_FWDEMO_PLATFORM_LOGGER_HPP_
+#define NRF52_DK_FWDEMO_PLATFORM_LOGGER_HPP_
 
 #include <logging/circular_buffer_logger.hpp>
 #include <mutex>

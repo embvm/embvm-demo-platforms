@@ -1,5 +1,5 @@
-#ifndef BLINKY_NRF52_DK_PLATFORM_HPP_
-#define BLINKY_NRF52_DK_PLATFORM_HPP_
+#ifndef FWDEMO_NRF52_DK_PLATFORM_HPP_
+#define FWDEMO_NRF52_DK_PLATFORM_HPP_
 
 #include <boot/boot_sequencer.hpp>
 #include <nrf52dk_fwdemo_hw_platform.hpp>
