@@ -23,6 +23,7 @@ subprojects/etl.wrap
 subprojects/freertos-kernel.wrap
 subprojects/gsl-lite.wrap
 subprojects/nrfx.wrap
+subprojects/STM32CubeL4.wrap
 
 ########################
 # C / C++ Ignore Rules #
