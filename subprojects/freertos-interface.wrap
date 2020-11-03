@@ -1,4 +1,4 @@
 [wrap-git]
-url = git@github.com:embvm/freertos-interface.git
+url = https://github.com/embvm/freertos-interface
 revision = master
 clone-recursive = true
