@@ -94,6 +94,9 @@ nordic_subproject = subproject('nordic')
 nrf52840_processor_dep = nordic_subproject.get_variable('nrf52840_processor_dep')
 nrf52_freertos_dep = nordic_subproject.get_variable('nrf52_freertos_dep')
 
+stm32l4_subproject = subproject('stm32l4')
+stm32l4r5_processor_dep = stm32l4_subproject.get_variable('stm32l4r5_processor_dep')
+
 freertos_interface_subproject = subproject('freertos-interface')
 freertos_embvm_dep = freertos_interface_subproject.get_variable('freertos_embvm_dep')
 freertos_heap3_dep = freertos_interface_subproject.get_variable('freertos_heap3_dep')
