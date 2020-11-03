@@ -119,6 +119,7 @@ aardvark_native_driver_dep = aardvark_subproject.get_variable('aardvark_native_d
 vl53l1x_subproject = subproject('st-vl53l1x')
 st_vl53l1x_driver_dep = vl53l1x_subproject.get_variable('st_vl53l1x_driver_dep')
 st_vl53l1x_native_driver_dep = vl53l1x_subproject.get_variable('st_vl53l1x_native_driver_dep')
+st_vl53l1x_files_dep = vl53l1x_subproject.get_variable('st_vl53l1x_files_dep')
 
 oled_subproject = subproject('two-tone-oled')
 ssd1306_native_driver_dep = oled_subproject.get_variable('ssd1306_native_driver_dep')

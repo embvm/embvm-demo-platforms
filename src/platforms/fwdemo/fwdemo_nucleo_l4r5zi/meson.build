@@ -6,11 +6,14 @@ nucleo_l4r5zi_fwdemo_platform_dep = declare_dependency(
 	dependencies: [
 		nucleo_l4r5zi_fwdemo_hw_platform_dep,
 		framework_threadless_dep,
-
 	],
 	link_args: [
 		'-L' + meson.current_source_dir(),
 		'-Tfwdemo_gcc_nucleo_l4rzi.ld',
+	],
+	compile_args: [
+		# TODO: remove once workaround is no longer needed (or threading is supportd)
+		'-DVL53L1X_DISABLE_LOCKING'
 	],
 )
 
