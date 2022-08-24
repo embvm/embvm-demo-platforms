@@ -18,7 +18,7 @@ char tof_string_[32];
 char tof_mode_string_[32];
 } // namespace
 
-extern "C" void _putchar(char c)
+extern "C" void putchar_(char c)
 {
 	// TODO: implement
 	(void)c;
