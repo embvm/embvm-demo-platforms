@@ -11,7 +11,7 @@ void FrameworkDemoSimPlatform::init_() noexcept
 	auto clk = VirtualPlatform::template findDriver<embvm::clk::SystemClock>();
 	if(clk)
 	{
-		PlatformLogger::inst().setClock(clk.value());
+		PlatformLogger::inst().setClock(*clk.value());
 	}
 
 	// Instead of using find_driver(), we will get the instance directly
