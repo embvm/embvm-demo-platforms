@@ -24,6 +24,9 @@ subprojects/freertos-kernel.wrap
 subprojects/gsl-lite.wrap
 subprojects/nrfx.wrap
 subprojects/STM32CubeL4.wrap
+subprojects/c-linked-list.wrap
+subprojects/cmsis_device_l4.wrap
+subprojects/stm32l4xx_hal_driver.wrap
 
 ########################
 # C / C++ Ignore Rules #
